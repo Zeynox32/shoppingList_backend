@@ -48,7 +48,7 @@ public class ShoppinglistApplication {
                         ShoppingListUser u = new ShoppingListUser();
                         u.setUsername("user" + i);
                         u.setPassword(argon2.hash(2, 65536, 1, "{noop}password" + i));
-                        u.setToken(UUID.randomUUID().toString());
+                        u.setToken(null);
                         return u;
                     })
                     .toList();
